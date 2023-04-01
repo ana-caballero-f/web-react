@@ -1,0 +1,14 @@
+.NavBarComponent {
+  border: solid 3px rgb(222, 141, 29);
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.NavLink {
+  color: rgb(222, 141, 29);
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}/*# sourceMappingURL=NavBarComponent.module.css.map */

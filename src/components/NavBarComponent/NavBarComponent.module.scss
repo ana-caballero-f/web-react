@@ -1,1 +1,17 @@
-.NavBarComponent {}
+.NavBarComponent {
+    border:solid 3px rgb(222, 141, 29); //coger color de la variable
+    width: 80%;
+    margin: auto;
+    // text-align: center;
+    display: flex;
+    justify-content:space-evenly;
+}
+
+.NavLink {
+    color:rgb(222, 141, 29);
+    text-decoration: none;
+    font: {
+        size: 1.5rem;
+        weight: bold;
+    }
+}
