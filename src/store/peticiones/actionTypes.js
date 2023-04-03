@@ -1,0 +1,11 @@
+export const GET_FOTOS_FAM = "GET_FOTOS_FAM"
+export const GET_FOTOS_FAM_OK = "GET_FOTOS_FAM_OK"
+export const GET_FOTOS_FAM_FAIL = "GET_FOTOS_FAM_FAIL"
+
+export const GET_FOTOS_COM = "GET_FOTOS_COM"
+export const GET_FOTOS_COM_OK = "GET_FOTOS_COM_OK"
+export const GET_FOTOS_COM_FAIL = "GET_FOTOS_COM_FAIL"
+
+export const GET_FOTOS_INF = "GET_FOTOS_INF"
+export const GET_FOTOS_INF_OK = "GET_FOTOS_INF_OK"
+export const GET_FOTOS_INF_FAIL = "GET_FOTOS_INF_FAIL"
