@@ -1,1 +1,32 @@
-.AboutComponent {}
+.AboutComponent {
+    background-color: orange;
+    width: 80%;
+    margin: auto;
+    }
+
+.AboutIntro {
+    border: solid red 3px;
+    display: flex;
+    width: 70%;
+    margin: auto;
+    }
+
+.Nombre {
+    color: rgb(53, 28, 189);
+    
+    font: {
+        size:4rem;
+        family: sans-serif;  
+    }
+    }
+
+.Apellido {
+    font: {
+        size: 2rem;
+        family: sans-serif;
+    }
+}
+
+img {
+    width: 100%;
+    }
