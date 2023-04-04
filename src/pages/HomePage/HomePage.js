@@ -1,7 +1,7 @@
 import styles from './HomePage.module.scss';
 
 import SesionesComponent from "../../components/SesionesComponent/SesionesComponent";
-import ImagenFotos from "../../assets/images/imagen.jpg";
+// import ImagenFotos from "../../assets/images/imagen.jpg";
 
 export default function HomePage() {
 
@@ -17,7 +17,7 @@ export default function HomePage() {
                 </section>
 
                 <section className={styles.IntroImage}>
-                    <img src={ImagenFotos} alt="fhsodif as fotos"></img>
+                    {/* <img src={ImagenFotos} alt="fhsodif as fotos"></img> */}
                 </section>
             </div>
             <SesionesComponent/>

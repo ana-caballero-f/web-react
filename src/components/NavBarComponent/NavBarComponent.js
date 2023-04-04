@@ -16,6 +16,8 @@ const NavBarComponent = () => {
         {/* <Link className={styles.NavLink} to='/sesiones'>Sesiones</Link>           */}
         <Link className={styles.NavLink} to='/contacto'>Contacto</Link>          
         <Link className={styles.NavLink} to='/login'>Login</Link>          
+        <Link className={styles.NavLink} to='/private'>Área Privada</Link>          
+        
       </nav>
 
   </div>
