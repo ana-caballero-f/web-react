@@ -3,15 +3,39 @@ import PropTypes from 'prop-types';
 import styles from './SesionesComponent.module.scss';
 
 import { Link } from 'react-router-dom';
+import LinkFamilia from '../../assets/images/linkFamilia.jpg'
+import LinkComunion from '../../assets/images/linkComuniones.jpg'
+import LinkInfantil from '../../assets/images/linkInfant-2.jpg'
 
 
 const SesionesComponent = () => (
-  <div className={styles.SesionesComponent}>
+  <div className={styles.SesionesComponent}> 
+    <div>
+      <h1 className={styles.TxSesiones}>¿QUIERES una SESIÓN?</h1>
+    </div>
       <nav>
-      <h1>links a las sesiones:</h1>
-        <Link className={styles.SesionesLink} to='/familia'>Familia</Link>
-        <Link className={styles.SesionesLink} to='/infantil'>Infantil</Link>
-        <Link className={styles.SesionesLink} to='/comuniones'>Comuniones</Link>         
+        <div className={styles.FotosSesiones}>
+          <div className={styles.CardSesiones}>
+            <Link to='/familia'><img src={LinkFamilia} alt="foto famalia" className={styles.SesionesLinks}/></Link>
+            <div>
+              <h4>Famlias</h4>
+            </div>
+          </div>
+          <div className={styles.CardSesiones}>
+            <Link to='/infantil'><img src={LinkInfantil} alt="foto infantil" className={styles.SesionesLinks}/></Link>
+            <div>
+              <h4>Infantil</h4>
+            </div>
+          </div>
+          <div className={styles.CardSesiones}>
+          <Link to='/comuniones'><img src={LinkComunion} alt="foto comunion" className={styles.SesionesLinks}/></Link>
+            <div>
+              <h4>Comuniones</h4>
+            </div>
+          </div>
+           
+                 
+        </div>
       </nav>
 
   </div>

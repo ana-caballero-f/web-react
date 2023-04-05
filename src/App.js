@@ -1,5 +1,6 @@
 // import './App.css';
 import { Route, Routes } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 
 import NavBarComponent from './components/NavBarComponent/NavBarComponent';
@@ -15,6 +16,7 @@ import PrivatePage from './pages/PrivatePage/PrivatePage';
 
 function App() {
 
+  const {user} = useSelector((state)=> state.AuthReducer)
   
   return (
     <div className="App">
@@ -23,11 +25,11 @@ function App() {
       <Routes>
         <Route exact path='/' element={<HomePage/>}></Route>
         <Route exact path='/contacto' element={<ContactoPage/>}></Route>
-        <Route exact path='/login' element={<LoginPage/>}></Route>
         <Route exact path='/familia' element={<FamiliaPage/>}></Route>
         <Route exact path='/infantil' element={<InfantilPage/>}></Route>
         <Route exact path='/comuniones' element={<ComunionesPage/>}></Route>
-        {/* <Route exact path='/private' element = {user && user.id ? <PrivatePage/>: <LoginPage/>}></Route> */}
+        <Route exact path='/login' element={user.user && user.user.id ? <PrivatePage/>: <LoginPage/>}></Route>
+        <Route exact path='/private' element = {user.user && user.user.id ? <PrivatePage/>: <LoginPage/>}></Route>
       </Routes>
     </div> 
   );

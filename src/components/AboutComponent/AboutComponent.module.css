@@ -4,6 +4,10 @@
   margin: auto;
 }
 
+.AboutComponent {
+  margin-top: 20px;
+}
+
 .AboutIntro {
   border: solid red 3px;
   display: flex;
@@ -11,15 +15,27 @@
   margin: auto;
 }
 
+.TextoIntro {
+  margin-top: 40px;
+}
+
 .Nombre {
   color: rgb(53, 28, 189);
+  margin: 0px;
   font-size: 4rem;
   font-family: sans-serif;
 }
 
 .Apellido {
+  margin: 0px;
   font-size: 2rem;
   font-family: sans-serif;
+}
+
+p {
+  font-size: 1.2rem;
+  font-family: sans-serif;
+  margin-right: 1em;
 }
 
 img {

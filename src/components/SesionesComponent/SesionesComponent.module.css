@@ -1,3 +1,37 @@
 .SesionesComponent {
   border: solid blue 3px;
+  display: flex;
+  width: 90%;
+  margin: auto;
+}
+
+.FotosSesiones {
+  border: solid 4px black;
+  margin-left: 2rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.SesionesLinks {
+  width: 100%;
+  margin-right: 2rem;
+}
+.SesionesLinks:hover {
+  transform: 1.4rem;
+}
+
+.TxSesiones {
+  border: solid green 2px;
+  color: rgb(219, 190, 26);
+  font-size: 2.5rem;
+  font-family: sans-serif;
+  text-align: center;
+  margin-top: 8rem;
+  margin-left: 7rem;
+  margin-right: 3rem;
+}
+
+.CardSesiones {
+  box-shadow: 0 8px 12px 6px rgb(138, 132, 131);
+  width: 25%;
 }/*# sourceMappingURL=SesionesComponent.module.css.map */
