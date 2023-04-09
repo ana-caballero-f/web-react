@@ -1,10 +1,12 @@
+import PrivateComponent from "../../components/PrivateComponent/PrivateComponent"
 
 
 export default function PrivatePage() {
 
     return(
        <div>
-            <h1> PRIVATE page</h1>
+            
+            <PrivateComponent></PrivateComponent>
        </div> 
     )
 }

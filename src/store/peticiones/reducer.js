@@ -9,7 +9,20 @@ import {
 
     GET_FOTOS_INF,
     GET_FOTOS_INF_OK,
-    GET_FOTOS_INF_FAIL
+    GET_FOTOS_INF_FAIL,
+
+    GET_FOTOS_PRIV,
+    GET_FOTOS_PRIV_OK,
+    GET_FOTOS_PRIV_FAIL,
+
+    GET_FOTO_DET,
+    GET_FOTO_DET_OK,
+    GET_FOTO_DET_FAIL,
+
+    POST_FOTO_FAV,
+    POST_FOTO_FAV_OK,
+    POST_FOTO_FAV_FAIL
+
 
 } from "./actionTypes"
 
@@ -21,6 +34,15 @@ const initialState = {
     loadingFotosCom: false,
     infantil: [],
     loadingFotosInf: false,
+    priv: [],
+    loadingFotosPriv: false,
+
+    foto: {},
+    loadingFotoDet: false,
+
+    favorita: {},
+    loadingFavorita: false,
+
     error: {
         message: ""
     }
@@ -38,7 +60,7 @@ export default function PeticionesReducer(state = initialState, action) {
             break
 
         case GET_FOTOS_FAM_FAIL:
-            state = {...state, loadingFotosFam: false, error: {message: action.payload}}
+            state = {...state, loadingFotosFam: false, familia:[], error: {message: action.payload}}
             break
 
 
@@ -51,7 +73,7 @@ export default function PeticionesReducer(state = initialState, action) {
             break
 
         case GET_FOTOS_COM_FAIL:
-            state = {...state, loadingFotosCom: false, error: {message: action.payload}}
+            state = {...state, loadingFotosCom: false, comunion:[], error: {message: action.payload}}
             break
 
 
@@ -64,11 +86,47 @@ export default function PeticionesReducer(state = initialState, action) {
             break
     
         case GET_FOTOS_INF_FAIL:
-            state = {...state, loadingFotosCom: false, error: {message: action.payload}}
+            state = {...state, loadingFotosCom: false, infantil: [], error: {message: action.payload}}
             break
 
 
+        case GET_FOTOS_PRIV:
+            state = {...state, loadingFotosPriv: true}
+            break
+        
+        case GET_FOTOS_PRIV_OK:
+            state = {...state, loadingFotosPriv: false, priv: action.payload}
+            break
+        
+        case GET_FOTOS_PRIV_FAIL:
+            state = {...state, loadingFotosPriv: false, priv: [], error: {message: action.payload}}
+            break
 
+        
+            case GET_FOTO_DET:
+            state = {...state, loadingFotoDet: true}
+            break
+        
+            case GET_FOTO_DET_OK:
+            state = {...state, loadingFotoDet: false, foto: action.payload}
+            break
+        
+        case GET_FOTO_DET_FAIL:
+            state = {...state, loadingFotoDet: false, foto: {}, error: {message: action.payload}}
+            break
+
+
+        case POST_FOTO_FAV:
+            state = {...state, loadingFavorita: true}
+            break
+            
+        case POST_FOTO_FAV_OK:
+            state = {...state, loadingFavorita: false, favorita: action.payload}
+            break
+            
+        case POST_FOTO_FAV_FAIL:
+            state = {...state, loadingFavorita: false, favorita: {}, error: {message: action.payload}}
+            break
 
         default:
             break

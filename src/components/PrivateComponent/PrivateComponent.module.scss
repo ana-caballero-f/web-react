@@ -1,12 +1,12 @@
-.FalimiaComponent {
+.PrivateComponent {
     width: 80%;
     margin: auto;
-    // background-color: $colorPrimary;
 }
 
-.ContainerFotosFam {
+.ContainerFotosPriv {
     display: grid;
     grid-template-columns:auto auto auto auto auto;
     gap: 15px;
     padding: 0px;
 }
+

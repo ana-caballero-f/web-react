@@ -1,1 +1,11 @@
-/*# sourceMappingURL=ComunionesComponent.module.css.map */
+.ComunionesComponent {
+  width: 80%;
+  margin: auto;
+}
+
+.ContainerFotosCom {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 15px;
+  padding: 0px;
+}/*# sourceMappingURL=ComunionesComponent.module.css.map */

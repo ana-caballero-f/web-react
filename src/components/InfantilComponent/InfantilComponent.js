@@ -21,12 +21,13 @@ const InfantilComponent = () => {
 
   return(
   <div className={styles.InfantilComponent}>
-
+    <div className={styles.ContainerFotosFam}>
     {infantil.map(inf => {
       return (
         <img src={inf.photo} alt={inf.alt}/>
       )
     })}
+    </div>
   </div>
 )
 };

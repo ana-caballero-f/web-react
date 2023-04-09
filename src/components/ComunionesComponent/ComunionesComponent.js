@@ -21,12 +21,13 @@ const ComunionesComponent = () => {
 
   return(
   <div className={styles.ComunionesComponent}>
-   
+    <div className={styles.ContainerFotosCom}>
     {comunion.map(com => {
       return (
         <img src={com.photo} alt={com.alt}/>
       )
     })}
+  </div>
   </div>
 )
 };

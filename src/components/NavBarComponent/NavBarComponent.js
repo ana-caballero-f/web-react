@@ -26,17 +26,15 @@ const NavBarComponent = () => {
     </div> */}
 
 
-    {/* ME FALTA QUITAR EL LINK DE "ÁREA PRIVADA" CUANDO YA ESTÁS AHÍ */}
-    {/* ================================================================ */}
       <nav>
-        <Link className={styles.NavLink} to='/'>Inicio| </Link>
+        <Link className={styles.NavLink} to='/'>Inicio </Link>
         {/* <Link className={styles.NavLink} to='/sesiones'>Sesiones</Link>           */}
-        <Link className={styles.NavLink} to='/contacto'>Contacto| </Link>
-        <Link className={styles.NavLink} to='/private'>Área privada| </Link>
+        <Link className={styles.NavLink} to='/contacto'>Contacto </Link>
+        <Link className={styles.NavLink} to='/private'>Área privada </Link>
         
-        {user.user && user.user.id? "" : <Link className={styles.NavLink} to='/login'> Login| </Link>}          
+        {user.user && user.user.id? "" : <Link className={styles.NavLink} to='/login'> Login </Link>}          
         {user.user && user.user.id? <Link className={styles.NavLink} to='/private'></Link> : ""}          
-        {user.user && user.user.id? <Link onClick ={cerrarSesion} className={styles.NavLink}> Logout| </Link> : ""}                      
+        {user.user && user.user.id? <Link onClick ={cerrarSesion} className={styles.NavLink}> Logout </Link> : ""}                      
       </nav>
 
   </div>

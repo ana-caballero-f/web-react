@@ -1,11 +1,11 @@
-.FalimiaComponent {
+.PrivateComponent {
   width: 80%;
   margin: auto;
 }
 
-.ContainerFotosFam {
+.ContainerFotosPriv {
   display: grid;
   grid-template-columns: auto auto auto auto auto;
   gap: 15px;
   padding: 0px;
-}/*# sourceMappingURL=FalimiaComponent.module.css.map */
+}/*# sourceMappingURL=PrivateComponent.module.css.map */
