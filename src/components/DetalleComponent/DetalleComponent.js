@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 
 import {addFotoFav} from '../../store/peticiones/actions'
+import { useParams } from 'react-router-dom';
 
 
 const DetalleComponent = () => {
@@ -12,10 +13,12 @@ const DetalleComponent = () => {
   /* importar la store para recoger la info. Con useSelector se cogen las variables */
   const { foto, loadingFotoDet } = useSelector((state) => state.PeticionesReducer)
 
+
     const dispatch = useDispatch();
+    const params = useParams();
 
   function addFoto() {
-    dispatch(addFotoFav())
+    dispatch(addFotoFav(params.id))
   }
 
 

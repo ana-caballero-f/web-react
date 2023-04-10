@@ -236,6 +236,7 @@ export function addFotoFav(fotoFavorita) {
     }
 }
 
+
 /* acciones para ver selección favoritas */
 export function actionGetFotosFavs() {
     return{
@@ -261,7 +262,7 @@ export function getFotosFavoritas() {
     return async (dispatch)=>{
         dispatch(actionGetFotosFavs())
         try{
-            const response = await axios.get("http://localhost:3000/favoritas")
+            const response = await axios.get("http://localhost:3000/favoritas" )
             dispatch(actionGetFotosFavsOk(response.data))
         }catch(error) {
             dispatch(actionGetFotosFavsFail(error))

@@ -9,8 +9,8 @@ import { getFotoDetalle } from "../../store/peticiones/actions"
 export default function DetalleFotoPage() {
 
     const params= useParams()
-
     const dispatch = useDispatch()
+    
     useEffect(() => {
         dispatch(getFotoDetalle(params.id))
     }, [])

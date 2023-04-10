@@ -21,7 +21,11 @@ import {
 
     POST_FOTO_FAV,
     POST_FOTO_FAV_OK,
-    POST_FOTO_FAV_FAIL
+    POST_FOTO_FAV_FAIL,
+
+    GET_FOTOS_FAVORITAS,
+    GET_FOTOS_FAVORITAS_OK,
+    GET_FOTOS_FAVORITAS_FAIL
 
 
 } from "./actionTypes"
@@ -37,11 +41,14 @@ const initialState = {
     priv: [],
     loadingFotosPriv: false,
 
-    foto: {},
+    foto: {},                   /* muestra foto individual ampliada */
     loadingFotoDet: false,
 
-    favorita: {},
+    favorita: {},               /* añade foto a "favoritas" */
     loadingFavorita: false,
+
+    seleccionFavoritas: [],     /* estado inicial de las fotos favoritas */
+    loadingSeleccFavs: false,
 
     error: {
         message: ""
@@ -126,6 +133,19 @@ export default function PeticionesReducer(state = initialState, action) {
             
         case POST_FOTO_FAV_FAIL:
             state = {...state, loadingFavorita: false, favorita: {}, error: {message: action.payload}}
+            break
+
+
+        case GET_FOTOS_FAVORITAS:
+            state = {...state, loadingSeleccFavs: true}
+            break
+
+        case GET_FOTOS_FAVORITAS_OK:
+            state = {...state, loadingSeleccFavs: false, seleccionFavoritas: action.payload}
+            break
+
+        case GET_FOTOS_FAVORITAS_FAIL:
+            state = {...state, loadingSeleccFavs: false, seleccionFavoritas:[], error: {message: action.payload}}
             break
 
         default:
