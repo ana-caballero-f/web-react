@@ -26,7 +26,11 @@ import {
 
     GET_FOTOS_FAVORITAS,
     GET_FOTOS_FAVORITAS_OK,
-    GET_FOTOS_FAVORITAS_FAIL
+    GET_FOTOS_FAVORITAS_FAIL,
+
+    DELETE_FOTO_FAVORITAS,
+    DELETE_FOTO_FAVORITAS_OK,
+    DELETE_FOTO_FAVORITAS_FAIL
 
 
 } from "./actionTypes"
@@ -266,6 +270,41 @@ export function getFotosFavoritas() {
             dispatch(actionGetFotosFavsOk(response.data))
         }catch(error) {
             dispatch(actionGetFotosFavsFail(error))
+        }
+    }
+}
+
+/* acciones para eleminar de favoritas */
+export function actionDeleteFoto(idFoto) {
+    return{
+        type: DELETE_FOTO_FAVORITAS,
+        payload: idFoto
+    }
+}
+
+export function actionDeleteFotoOk(fotoDetalle) {
+    return{
+        type: DELETE_FOTO_FAVORITAS_OK,
+        payload: fotoDetalle
+        }
+}
+
+export function actionDeleteFotoFail(error) {
+    return{
+        type: DELETE_FOTO_FAVORITAS_FAIL,
+        payload: error
+        }
+}
+
+
+export function deleteFotoFavorita(idFoto) {
+    return async (dispatch) => {
+        dispatch(actionDeleteFoto(idFoto))
+        try{
+            const response = await axios.delete(`http://localhost:3000/favoritas/${idFoto}`)
+            dispatch(actionDeleteFotoOk(response.data))
+        }catch(error) {
+            dispatch(actionDeleteFotoFail(error))
         }
     }
 }

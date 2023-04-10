@@ -25,8 +25,11 @@ import {
 
     GET_FOTOS_FAVORITAS,
     GET_FOTOS_FAVORITAS_OK,
-    GET_FOTOS_FAVORITAS_FAIL
+    GET_FOTOS_FAVORITAS_FAIL,
 
+    DELETE_FOTO_FAVORITAS,
+    DELETE_FOTO_FAVORITAS_OK,
+    DELETE_FOTO_FAVORITAS_FAIL
 
 } from "./actionTypes"
 
@@ -49,6 +52,9 @@ const initialState = {
 
     seleccionFavoritas: [],     /* estado inicial de las fotos favoritas */
     loadingSeleccFavs: false,
+
+    fotoEliminada: {},          /* foto eliminada */
+    loadingFotoEliminada: true,
 
     error: {
         message: ""
@@ -110,11 +116,11 @@ export default function PeticionesReducer(state = initialState, action) {
             break
 
         
-            case GET_FOTO_DET:
+        case GET_FOTO_DET:
             state = {...state, loadingFotoDet: true}
             break
         
-            case GET_FOTO_DET_OK:
+        case GET_FOTO_DET_OK:
             state = {...state, loadingFotoDet: false, foto: action.payload}
             break
         
@@ -147,6 +153,20 @@ export default function PeticionesReducer(state = initialState, action) {
         case GET_FOTOS_FAVORITAS_FAIL:
             state = {...state, loadingSeleccFavs: false, seleccionFavoritas:[], error: {message: action.payload}}
             break
+
+
+        case DELETE_FOTO_FAVORITAS:
+            state = {...state, loadingFotoEliminada: false}
+            break
+    
+        case DELETE_FOTO_FAVORITAS_OK:
+            state = {...state, loadingFotoEliminada: false, fotoEliminada: action.payload}
+            break
+    
+        case DELETE_FOTO_FAVORITAS_FAIL:
+            state = {...state, loadingFotoEliminada: false, fotoEliminada:[], error: {message: action.payload}}
+            break
+
 
         default:
             break

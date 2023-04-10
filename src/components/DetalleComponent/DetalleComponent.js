@@ -3,9 +3,11 @@ import PropTypes from 'prop-types';
 import styles from './DetalleComponent.module.scss';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
+import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import {addFotoFav} from '../../store/peticiones/actions'
-import { useParams } from 'react-router-dom';
+
 
 
 const DetalleComponent = () => {
@@ -33,9 +35,10 @@ const DetalleComponent = () => {
   return (
     <div className={styles.DetalleComponent}>
     
-      <img src={foto.photo} alt={foto.alt}/>
+      <img className={styles.ImagenDetalle} src={foto.photo} alt={foto.alt}/>
       <p>{foto.id}</p>
       <button onClick={addFoto}>Añadir a favoritas</button>
+      <Link to='/private'><button>X</button></Link>
     </div>
 )
 };
