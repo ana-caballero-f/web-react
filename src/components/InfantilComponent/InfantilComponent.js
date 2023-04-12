@@ -14,6 +14,7 @@ const InfantilComponent = () => {
   const dispatch = useDispatch()
   const {infantil, loadingFotosInf} = useSelector((state) => state.PeticionesReducer)
 
+  
   useEffect(() => {
     dispatch(getFotosInf())
   }, [])

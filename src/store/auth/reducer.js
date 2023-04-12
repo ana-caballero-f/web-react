@@ -5,7 +5,11 @@ import {
 
     DO_LOGOUT,
     DO_LOGOUT_OK,
-    DO_LOGOUT_FAIL
+    DO_LOGOUT_FAIL,
+
+    DO_REGISTER,
+    DO_REGISTER_OK,
+    DO_REGISTER_FAIL
 
     } from './actionTypes'
 
@@ -26,10 +30,19 @@ import {
     /* ME FALTA PONER LA FUNCIÓN EN EL user PARA MANTENER LA SESIÓN. PERO SI LO PONGO, ME DA FALLO (NO ME DEJA SALIR NI CON LOGOUT) */
     const initialState = {
         loadingLogin: false, 
-        user: {},              
+        user: {}, 
+        
+        loadingRegister: false,
+        register: {},
+
         error: {                
             message: ""
+        },
+
+        errorRegister: {
+            messageRegister: ""
         }
+
     };  
 
 
@@ -48,11 +61,26 @@ import {
                 break
 
 
+
             case DO_LOGOUT:
                 state = {...state}
                 break
             case DO_LOGOUT_OK:
                 state = {...state, user:{}}
+                break
+
+
+
+            case DO_REGISTER:
+                state = {...state, loadingRegister: true}
+                break
+        
+            case DO_REGISTER_OK:
+                state = {...state, loadingRegister: false, user: action.payload}
+                break
+        
+            case DO_REGISTER_FAIL:
+                state = { ...state, loadingRegister: false, user: {}, errorRegister: {messageRegister: action.payload}}
                 break
                 
             default:

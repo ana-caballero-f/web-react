@@ -6,7 +6,12 @@ DO_LOGIN_FAIL,
 
 DO_LOGOUT,
 DO_LOGOUT_OK,
-DO_LOGOUT_FAIL
+DO_LOGOUT_FAIL,
+
+DO_REGISTER,
+DO_REGISTER_OK,
+DO_REGISTER_FAIL
+
 } from './actionTypes'
 
 
@@ -73,6 +78,44 @@ export function doLogout() {
             dispatch(actionDoLogoutOk())
         }catch (error) {
             dispatch(actionDoLogoutFail())
+        }
+    }
+}
+
+
+
+/* acciones para el registro de ususario */
+export function actionDoRegister(registerData) {
+    return {
+        type: DO_REGISTER,
+        payload: registerData
+    }
+}
+
+export function actionDoRegisterOk(registerDetails) {
+    return {
+        type: DO_REGISTER_OK,
+        payload: registerDetails
+    }
+}
+
+export function actionDoRegisterFail(error) {
+    return {
+        type: DO_REGISTER_FAIL,
+        payload: error
+    }
+}
+
+
+export function doRegister(userRegisterData) {
+    return async(dispatch) => {
+        try{
+            // console.log('userData',userData)
+            dispatch(actionDoRegister(userRegisterData))
+            const response = await axios.post("http://localhost:3000/register", userRegisterData)
+            dispatch(actionDoRegisterOk(response.data))
+        }catch (error) {
+            dispatch(actionDoRegisterFail(error))
         }
     }
 }

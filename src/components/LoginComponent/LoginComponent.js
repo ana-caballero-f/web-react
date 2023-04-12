@@ -14,6 +14,7 @@ const LoginComponent = () => {
   const [name, setName] = useState("")
   const [password, setPassword] = useState("")
 
+
   const {user, error} = useSelector((state)=> state.AuthReducer) /* importar del state de AuthReducer {user} para observar en el useEffect 
                                                                     y {error} para que salga <p>con mensaje de error */
   
@@ -37,10 +38,10 @@ const LoginComponent = () => {
   return(
     <div className={styles.LoginComponent}>
       <form>
-        <label>Nombre</label>
+        <label>Nombre</label><br/>
         <input value={name} onChange={(e) => setName(e.target.value)}></input><br/>
 
-        <label>Constraseña</label>
+        <label>Constraseña</label><br/>
         <input value={password} onChange={(e) => setPassword(e.target.value)}></input><br/>
 
       </form>
