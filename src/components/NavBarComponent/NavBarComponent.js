@@ -32,7 +32,7 @@ const NavBarComponent = () => {
         <Link className={styles.NavLink} to='/contacto'>Contacto </Link>
         <Link className={styles.NavLink} to='/private'>Área privada </Link>
         
-        {user.user && user.user.id? "" : <Link className={styles.NavLink} to='/login'> Login </Link>}          
+        {user.user && user.user.id? "" : <Link className={styles.NavLink} to='/login'></Link>}          
         {user.user && user.user.id? <Link className={styles.NavLink} to='/private'></Link> : ""}          
         {user.user && user.user.id? <Link onClick ={cerrarSesion} className={styles.NavLink}> Logout </Link> : ""}                      
       </nav>

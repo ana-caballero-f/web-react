@@ -39,13 +39,13 @@ const LoginComponent = () => {
     <div className={styles.LoginComponent}>
       <form>
         <label>Nombre</label><br/>
-        <input value={name} onChange={(e) => setName(e.target.value)}></input><br/>
+        <input className={styles.LoginInput} value={name} onChange={(e) => setName(e.target.value)}></input><br/>
 
         <label>Constraseña</label><br/>
-        <input value={password} onChange={(e) => setPassword(e.target.value)}></input><br/>
+        <input className={styles.LoginInput} value={password} onChange={(e) => setPassword(e.target.value)}></input><br/>
 
       </form>
-      <button onClick={checkLogin}>Login</button>
+      <button className={styles.LoginButton} onClick={checkLogin}>Login</button>
       {error.message && <p>Hay un error en el login</p> }
     </div>
   )

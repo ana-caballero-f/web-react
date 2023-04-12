@@ -76,11 +76,11 @@ import {
                 break
         
             case DO_REGISTER_OK:
-                state = {...state, loadingRegister: false, user: action.payload}
+                state = {...state, loadingRegister: false, register: action.payload}
                 break
         
             case DO_REGISTER_FAIL:
-                state = { ...state, loadingRegister: false, user: {}, errorRegister: {messageRegister: action.payload}}
+                state = { ...state, loadingRegister: false, register: {}, errorRegister: {messageRegister: action.payload}}
                 break
                 
             default:

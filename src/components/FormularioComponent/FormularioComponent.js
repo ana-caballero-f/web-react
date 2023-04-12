@@ -35,21 +35,21 @@ const FormularioComponent = () => {
   return (
     <div className={styles.FormularioComponent}>
       <form ref={form} onSubmit={sendEmail}>
-        <label>Nombre</label>
-        <input placeholder='Escribe tu nombre' type="text" name="name" required/>
-        <label>Apellidos</label>
-        <input placeholder='Escribe tus apellidos' type="text" name="surname" required/>
-        <label>Email</label>
-        <input placeholder='Escribe tu correo' type="email" name="email" required/>
-        <label>Teléfono</label>
-        <input placeholder='Escribe tu teléfono' type="text" name="telefono" required/>
-        <label>Quiero información sobre ...</label>
-        <select name="mensaje" required>
+        <label className={styles.FormularioLabel}>Nombre</label>
+        <input className={styles.FormularioInput} placeholder='Escribe tu nombre' type="text" name="name" required/>
+        <label className={styles.FormularioLabel}>Apellidos</label>
+        <input className={styles.FormularioInput} placeholder='Escribe tus apellidos' type="text" name="surname" required/>
+        <label className={styles.FormularioLabel}>Email</label>
+        <input className={styles.FormularioInput} placeholder='Escribe tu correo' type="email" name="email" required/>
+        <label className={styles.FormularioLabel}>Teléfono</label>
+        <input className={styles.FormularioInput} placeholder='Escribe tu teléfono' type="text" name="telefono" required/>
+        <label className={styles.FormularioLabel}>Quiero información sobre ...</label>
+        <select className={styles.FormularioInput} name="mensaje" required>
           <option value="infantil">Infantil</option>
           <option value="comunion">Comunion</option>
           <option value="familia">Familiar</option>
         </select>
-        <input type="submit" value="Enviar mensaje" />
+        <input className={styles.FormularioButton} type="submit" value="Enviar mensaje" />
       </form>
     </div>
   );

@@ -27,7 +27,7 @@ const RegistroComponent = () => {
   const [password, setPassword] = useState("")
   
 
-  const {register, errorRegister} = useSelector((state)=> state.AuthReducer) /* importar del state de AuthReducer {user} para observar en el useEffect 
+  const {register, errorRegister} = useSelector((state)=> state.AuthReducer) /* importar del state de AuthReducer {} para observar en el useEffect 
                                                                     y {error} para que salga <p>con mensaje de error */
   
   const dispatch = useDispatch()
@@ -53,24 +53,22 @@ const RegistroComponent = () => {
     <div className={styles.RegistroComponent}>
       <form>
         <label>Nombre</label>
-        <input value={name} onChange={(e) => setName(e.target.value)}></input><br/>
+        <input className={styles.RegistroInput} value={name} onChange={(e) => setName(e.target.value)}></input><br/>
 
         <label>Email</label>
-        <input value={email} onChange={(e) => setEmail(e.target.value)}></input><br/>
+        <input className={styles.RegistroInput} value={email} onChange={(e) => setEmail(e.target.value)}></input><br/>
 
         <label>Constraseña</label>
-        <input value={password} onChange={(e) => setPassword(e.target.value)}></input><br/>
+        <input className={styles.RegistroInput} value={password} onChange={(e) => setPassword(e.target.value)}></input><br/>
 
       </form>
-      <button onClick={checkRegister}>Registrarme</button>
+      <button className={styles.RegistroButton} onClick={checkRegister}>Registrarme</button>
       {errorRegister.messageRegister && <p>Hay un error en el registro</p> }
     </div>
   )
 
 
-
-
-  
+ 
 //   const history = useNavigate();
 
 //   const handleSubmit = async event => {
