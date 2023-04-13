@@ -108,6 +108,7 @@ export function actionDoRegisterFail(error) {
 
 
 export function doRegister(userRegisterData) {
+    userRegisterData.misFavoritas = []
     return async(dispatch) => {
         try{
             // console.log('userData',userData)

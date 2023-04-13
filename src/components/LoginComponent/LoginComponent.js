@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styles from './LoginComponent.module.scss';
 
+// import index.scss from '../../src/styles/shared/utils/index.scss'
+
 import { useState } from 'react';
 import {useDispatch, useSelector,} from 'react-redux'
 import { doLogin } from '../../store/auth/actions'

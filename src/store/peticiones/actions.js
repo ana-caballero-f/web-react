@@ -241,6 +241,16 @@ export function addFotoFav(fotoFavorita) {
 }
 
 
+export  function updateFotoFav(foto, puntos){
+    return async (dispatch)=>{
+        dispatch(actionUpdate...)
+        try{
+            const response = await axios.patch(`http://localhost:3000/favoritas/${foto.id}`, {puntuacion: puntos})
+        }catch...
+    }
+}
+
+
 /* acciones para ver selección favoritas */
 export function actionGetFotosFavs() {
     return{

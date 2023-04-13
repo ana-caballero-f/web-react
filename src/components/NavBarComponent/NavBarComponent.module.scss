@@ -1,5 +1,8 @@
+
+// @import '../../index.scss';
+
 .NavBarComponent {
-    border:solid 3px rgb(222, 141, 29); //coger color de la variable
+    // border:solid 3px $colorPrimary; //coger color de la variable
     background-color: rgb(253, 250, 245);
     width: 80%;
     height: 4rem;

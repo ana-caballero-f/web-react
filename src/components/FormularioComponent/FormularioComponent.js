@@ -34,6 +34,10 @@ const FormularioComponent = () => {
   
   return (
     <div className={styles.FormularioComponent}>
+      <section>
+        <h1 className={styles.FormularioTitle}>Formulario de contacto</h1>
+        <p>Rellena el formulario y me pondré en contacto contigo para darte la información solicitada</p>
+      </section>
       <form ref={form} onSubmit={sendEmail}>
         <label className={styles.FormularioLabel}>Nombre</label>
         <input className={styles.FormularioInput} placeholder='Escribe tu nombre' type="text" name="name" required/>
@@ -45,9 +49,9 @@ const FormularioComponent = () => {
         <input className={styles.FormularioInput} placeholder='Escribe tu teléfono' type="text" name="telefono" required/>
         <label className={styles.FormularioLabel}>Quiero información sobre ...</label>
         <select className={styles.FormularioInput} name="mensaje" required>
-          <option value="infantil">Infantil</option>
-          <option value="comunion">Comunion</option>
-          <option value="familia">Familiar</option>
+          <option value="infantil">Sesión Infantil</option>
+          <option value="comunion">Sesión de Comunión</option>
+          <option value="familia">Sesión Familiar</option>
         </select>
         <input className={styles.FormularioButton} type="submit" value="Enviar mensaje" />
       </form>
