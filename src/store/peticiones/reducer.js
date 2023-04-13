@@ -11,6 +11,10 @@ import {
     GET_FOTOS_INF_OK,
     GET_FOTOS_INF_FAIL,
 
+    GET_FOTOS_CARRUSEL, 
+    GET_FOTOS_CARRUSEL_OK,
+    GET_FOTOS_CARRUSEL_FAIL,
+
     GET_FOTOS_PRIV,
     GET_FOTOS_PRIV_OK,
     GET_FOTOS_PRIV_FAIL,
@@ -33,7 +37,8 @@ import {
 
     UPDATE_FOTO_FAVORITA,
     UPDATE_FOTO_FAVORITA_OK,
-    UPDATE_FOTO_FAVORITA_FAIL
+    UPDATE_FOTO_FAVORITA_FAIL,
+  
 
 } from "./actionTypes"
 
@@ -45,9 +50,12 @@ const initialState = {
     loadingFotosCom: false,
     infantil: [],
     loadingFotosInf: false,
+    carrusel: [],
+    loadingFotosCarrusel: false,
     priv: [],
     loadingFotosPriv: false,
 
+    
     foto: {},                   /* muestra foto individual ampliada */
     loadingFotoDet: false,
 
@@ -107,6 +115,19 @@ export default function PeticionesReducer(state = initialState, action) {
     
         case GET_FOTOS_INF_FAIL:
             state = {...state, loadingFotosCom: false, infantil: [], error: {message: action.payload}}
+            break
+
+
+        case GET_FOTOS_CARRUSEL:
+            state = {...state, loadingFotosCarrusel: true}
+            break
+        
+        case GET_FOTOS_CARRUSEL_OK:
+            state = {...state, loadingFotosCarrusel: false, carrusel: action.payload}
+            break
+        
+        case GET_FOTOS_CARRUSEL_FAIL:
+            state = {...state, loadingFotosCarrusel: false, carrusel: [], error: {message: action.payload}}
             break
 
 

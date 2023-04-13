@@ -16,12 +16,12 @@
 }
 
 .SesionesLinks {
-    border: solid 3px red;
+    // border: solid 3px red;
     width: 100%;
     margin-right: 2rem; 
     &:hover {
-        transform: scale(1.4rem);
-    } 
+        transform: scale(0.9);
+        }  
 }
 
 .TxSesiones {
@@ -32,20 +32,19 @@
     text-align: center;
     margin-top: 8rem;
     margin-left: 7rem;
-    margin-right: 3rem;
 }
 
 .CardSesiones {
     box-shadow: 0 8px 12px 6px rgb(138, 132, 131);
     width: 25%;
-    
+    &:hover {
+        transform: scale(1.1);
+        }  
 }
 
-// .FotosHover{
-
-//     &:hover {
-    
-//     transform: scale(2rem);
-// }
-    
-// }
+.CardText {
+    color: $colorPrimary;
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    text-align: center;
+}

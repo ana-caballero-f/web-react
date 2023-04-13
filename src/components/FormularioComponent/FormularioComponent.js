@@ -45,9 +45,9 @@ const FormularioComponent = () => {
         <input className={styles.FormularioInput} placeholder='Escribe tu teléfono' type="text" name="telefono" required/>
         <label className={styles.FormularioLabel}>Quiero información sobre ...</label>
         <select className={styles.FormularioInput} name="mensaje" required>
-          <option value="infantil">Infantil</option>
-          <option value="comunion">Comunion</option>
-          <option value="familia">Familiar</option>
+          <option value="infantil">Sesión Infantil</option>
+          <option value="comunion">Sesión de Comunion</option>
+          <option value="familia">Sesión Familiar</option>
         </select>
         <input className={styles.FormularioButton} type="submit" value="Enviar mensaje" />
       </form>

@@ -25,7 +25,7 @@ const FalimiaComponent = () => {
       <div className={styles.ContainerFotosFam}>
       {familia.map(fam => {
         return(
-          <img src={fam.photo} alt={fam.alt}/>
+          <img className={styles.FotosFam} src={fam.photo} alt={fam.alt}/>
         )
       })}
       </div>

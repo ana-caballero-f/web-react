@@ -1,5 +1,5 @@
 .FalimiaComponent {
-    border: solid black 3px;
+    // background-color: pink;
     width: 80%;
     margin: auto;
     
@@ -10,4 +10,8 @@
     grid-template-columns:auto auto auto auto auto;
     gap: 15px;
     padding: 0px;
+}
+
+.FotosFam {
+    width: 100%;
 }

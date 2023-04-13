@@ -38,7 +38,7 @@ const LoginComponent = () => {
   return(
     <div className={styles.LoginComponent}>
       <form>
-        <label>Nombre</label><br/>
+        <label>Email</label><br/>
         <input className={styles.LoginInput} value={name} onChange={(e) => setName(e.target.value)}></input><br/>
 
         <label>Constraseña</label><br/>

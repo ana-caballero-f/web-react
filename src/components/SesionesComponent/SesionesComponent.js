@@ -18,19 +18,19 @@ const SesionesComponent = () => (
           <div className={styles.CardSesiones}>
             <Link to='/familia'><img src={LinkFamilia} alt="foto famalia" className={styles.SesionesLinks}/></Link>
             <div>
-              <h4>Famlias</h4>
+              <h4 className={styles.CardText}>Familias</h4>
             </div>
           </div>
           <div className={styles.CardSesiones}>
             <Link to='/infantil'><img src={LinkInfantil} alt="foto infantil" className={styles.SesionesLinks}/></Link>
             <div>
-              <h4>Infantil</h4>
+              <h4 className={styles.CardText}>Infantil</h4>
             </div>
           </div>
           <div className={styles.CardSesiones}>
           <Link to='/comuniones'><img src={LinkComunion} alt="foto comunion" className={styles.SesionesLinks}/></Link>
             <div>
-              <h4>Comuniones</h4>
+              <h4 className={styles.CardText}>Comuniones</h4>
             </div>
           </div>
            

@@ -12,6 +12,10 @@ import {
     GET_FOTOS_INF_OK,
     GET_FOTOS_INF_FAIL,
 
+    GET_FOTOS_CARRUSEL, 
+    GET_FOTOS_CARRUSEL_OK,
+    GET_FOTOS_CARRUSEL_FAIL,
+
     GET_FOTOS_PRIV,
     GET_FOTOS_PRIV_OK,
     GET_FOTOS_PRIV_FAIL,
@@ -139,6 +143,42 @@ export function getFotosInf() {
         }
     }
 }
+
+
+/* acciones para las fotos del carrusel */
+export function actionGetFotosCarrusel() {
+    return{
+        type: GET_FOTOS_CARRUSEL
+    }
+}
+
+export function actionGetFotosCarruselOk(carrusel) {
+    return{
+        type: GET_FOTOS_CARRUSEL_OK,
+        payload: carrusel
+        }
+}
+
+export function actionGetFotosCarruselFail(error) {
+    return{
+        type: GET_FOTOS_CARRUSEL_FAIL,
+        payload: error
+        }
+}
+
+export function getFotosCarrusel() {
+    return async (dispatch)=>{
+        dispatch(actionGetFotosCarrusel())
+        try{
+            const response = await axios.get("http://localhost:3000/carrusel")
+            dispatch(actionGetFotosCarruselOk(response.data))
+        }catch(error) {
+            dispatch(actionGetFotosCarruselFail(error))
+        }
+    }
+}
+
+
 
 /* acciones para las fotos área privada */
 export function actionGetFotosPriv() {
