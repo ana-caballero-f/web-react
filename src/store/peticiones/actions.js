@@ -30,7 +30,11 @@ import {
 
     DELETE_FOTO_FAVORITAS,
     DELETE_FOTO_FAVORITAS_OK,
-    DELETE_FOTO_FAVORITAS_FAIL
+    DELETE_FOTO_FAVORITAS_FAIL,
+
+    UPDATE_FOTO_FAVORITA,
+    UPDATE_FOTO_FAVORITA_OK,
+    UPDATE_FOTO_FAVORITA_FAIL
 
 
 } from "./actionTypes"
@@ -305,6 +309,42 @@ export function deleteFotoFavorita(idFoto) {
             dispatch(actionDeleteFotoOk(response.data))
         }catch(error) {
             dispatch(actionDeleteFotoFail(error))
+        }
+    }
+}
+
+
+/* acciones para actualizar favoritas (puntuación) */
+export function actionUpdateFoto(idFoto) {
+    return{
+        type: UPDATE_FOTO_FAVORITA,
+        payload: idFoto
+    }
+}
+
+export function actionUpdateFotoOk(fotoUpdate) {
+    return{
+        type: UPDATE_FOTO_FAVORITA_OK,
+        payload: fotoUpdate
+        }
+}
+
+export function actionUpdateFotoFail(error) {
+    return{
+        type: UPDATE_FOTO_FAVORITA_FAIL,
+        payload: error
+        }
+}
+
+
+export function updateFotoFav(foto, puntos) {
+    return async (dispatch) => {
+        dispatch(actionUpdateFoto(foto))
+        try{
+            const response = await axios.patch(`http://localhost:3000/favoritas/${foto}`, { puntuacion: puntos })
+            dispatch(actionUpdateFotoOk(response.data))
+        }catch(error) {
+            dispatch(actionUpdateFotoFail(error))
         }
     }
 }
