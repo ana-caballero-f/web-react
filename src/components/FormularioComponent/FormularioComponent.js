@@ -34,6 +34,8 @@ const FormularioComponent = () => {
   
   return (
     <div className={styles.FormularioComponent}>
+      <h1 className={styles.FormularioTitle}>Formulario de contacto</h1>
+      <p className={styles.FormularioTitle}>Rellena el formulario y me pondré en contacto contigo para darte la información solicitada</p>
       <form ref={form} onSubmit={sendEmail}>
         <label className={styles.FormularioLabel}>Nombre</label>
         <input className={styles.FormularioInput} placeholder='Escribe tu nombre' type="text" name="name" required/>

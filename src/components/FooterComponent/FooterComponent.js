@@ -4,7 +4,9 @@ import styles from './FooterComponent.module.scss';
 
 const FooterComponent = () => (
   <div className={styles.FooterComponent}>
-    FooterComponent Component
+    <div className={styles.Footer}>
+
+    </div>
   </div>
 );
 

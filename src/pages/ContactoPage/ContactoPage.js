@@ -16,12 +16,8 @@ export default function ContactoPage() {
 
 
     return(
-      <div>
-        <h1>Formulario de contacto</h1>
-        <p>Rellena el formulario y me pondré en contacto contigo para darte la información solicitada</p>
-        <section>
-          <FormularioComponent></FormularioComponent>
-        </section>
+      <div>  
+          <FormularioComponent></FormularioComponent>  
       </div>  
      
   );

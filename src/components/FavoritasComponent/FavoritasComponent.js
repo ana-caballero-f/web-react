@@ -34,7 +34,7 @@ const FavoritasComponent = () => {
     {seleccionFavoritas.map(seleccionFav => {
       return (
         <div>
-          <img src= {seleccionFav.photo} alt= {seleccionFav.alt}/>
+          <img className={styles.FotosFavoritas} src= {seleccionFav.photo} alt= {seleccionFav.alt}/>
           <p>Ref foto: #{seleccionFav.id}</p>
           <div>
             <button onClick={() => puntuar(seleccionFav.puntuacion) ? "⭐" : ""}>Darle una estrella</button>

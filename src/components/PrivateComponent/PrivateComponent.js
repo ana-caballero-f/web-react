@@ -39,7 +39,7 @@ const PrivateComponent = () => {
         {priv.map(pri => {
           return (  
             <div>     
-              <img className={styles.ContainerFotosPriv} src={pri.photo} alt={pri.alt}></img>
+              <img className={styles.FotosPriv} src={pri.photo} alt={pri.alt}></img>
               <Link to={`/detalle/${pri.id}`}>
                 <button>Ampliar</button>  
               </Link>

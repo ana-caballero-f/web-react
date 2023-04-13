@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getFotosCarrusel } from '../../store/peticiones/actions';
 
 /* importar librería Swiper para carrusel */
-import { Navigation, Pagination, A11y} from 'swiper';
+import { Navigation, Pagination, A11y, Autoplay} from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 import 'swiper/css';
@@ -32,11 +32,12 @@ const CarruselComponent = () => {
         "--swiper-navigation-border": "solid black 2px"
         // "--swiper-pagination-color": "#000000",
       }}
-          modules={[Navigation, Pagination, A11y]}
+          modules={[Navigation, Pagination, A11y, Autoplay]}
           spaceBetween={100}
           slidesPerView={3}
-          navigation
-          pagination={{ clickable: true, loop: true }}
+          autoplay
+          // navigation
+          // pagination={{ clickable: true, loop: true }}
 
   >
      <div className={styles.ContainerFotosCarrusel}>

@@ -1,1 +1,6 @@
-.FooterComponent {}
+@import '../../../src/styles/shared/utils/index.scss';
+
+.FooterComponent {
+    background-color: $colorPrimary;
+    height: 100px;
+}
