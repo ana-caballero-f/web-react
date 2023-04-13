@@ -12,7 +12,7 @@ const PrivateComponent = () => {
     const dispatch = useDispatch()
 
     const {priv, favorita, loadinFotosPriv} = useSelector((state) => state.PeticionesReducer)
-
+    
     
     /* para cargar las fotos del área privada */
     useEffect(() => {

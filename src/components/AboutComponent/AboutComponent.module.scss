@@ -1,3 +1,5 @@
+@import '../../../src/styles/shared/utils/index.scss';
+
 .AboutComponent {
     // background-color: orange;
     width: 80%;
@@ -8,41 +10,50 @@
 .AboutComponent{
     margin-top: 20px;
 }
-.AboutIntro {
-    border: solid red 3px;
-    display: flex;
+
+.TextoIntro {
+    // border: black solid 2px;
+    margin-top: 80px;
     width: 70%;
+    text-align: center;
+}
+
+.AboutIntro {
+    // border: solid red 3px;
+    display: flex;
+    width: 90%;
     margin: auto;
     }
 
-.TextoIntro {
-    margin-top: 40px;
+.TextoFot {
+    // border: solid pink 2px;
+    font-size: 2rem;
+    font-family: sans-serif;
+    text-align: center;
+    margin: 0rem 2rem 0rem 0rem;
 }
 
+
 .Nombre {
-    color: rgb(211, 181, 49);
-    margin: 0px;
-    
+    // border: solid red 2px;
+    color: $colorPrimary;
+    margin: 0rem 2rem 4rem 0rem;
+    text-align: center;
     font: {
-        size:4rem;
+        size:2rem;
         family: sans-serif;  
     }
     }
 
-.Apellido {
-    margin: 0px;
-    font: {
-        size: 2rem;
-        family: sans-serif;
-    }
-}
-
-p {
+.TextoParrafo {
+    // border: solid 2px blue;
     font-size: 1.2rem;
     font-family: sans-serif;
-    margin-right: 1em;
+    margin-right: 2em;
 }
 
-img {
+.ImageAbout {
     width: 100%;
+    border: solid 3px $colorPrimary;
+    padding: 1rem;
     }

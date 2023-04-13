@@ -29,9 +29,9 @@ function App() {
         <Route exact path='/familia' element={<FamiliaPage/>}></Route>
         <Route exact path='/infantil' element={<InfantilPage/>}></Route>
         <Route exact path='/comuniones' element={<ComunionesPage/>}></Route>
-        <Route exact path='/login' element={user.user && user.user.id ? <PrivatePage/>: <LoginPage/>}></Route> 
-        <Route exact path='/private' element = {user.user && user.user.id ? <PrivatePage/>: <LoginPage/>}></Route> 
-        {/* <Route exact path='/private' element = {<PrivatePage></PrivatePage>}></Route> */}
+        {/* <Route exact path='/login' element={user.user && user.user.id ? <PrivatePage/>: <LoginPage/>}></Route>  */}
+        {/* <Route exact path='/private' element = {user.user && user.user.id ? <PrivatePage/>: <LoginPage/>}></Route>  */}
+        <Route exact path='/private' element = {<PrivatePage></PrivatePage>}></Route>
         <Route exact path='/detalle/:id' element = {<DetalleFotoPage></DetalleFotoPage>}></Route>
       </Routes>
     </div> 

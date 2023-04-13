@@ -29,7 +29,11 @@ import {
 
     DELETE_FOTO_FAVORITAS,
     DELETE_FOTO_FAVORITAS_OK,
-    DELETE_FOTO_FAVORITAS_FAIL
+    DELETE_FOTO_FAVORITAS_FAIL,
+
+    UPDATE_FOTO_FAVORITA,
+    UPDATE_FOTO_FAVORITA_OK,
+    UPDATE_FOTO_FAVORITA_FAIL
 
 } from "./actionTypes"
 
@@ -55,6 +59,9 @@ const initialState = {
 
     fotoEliminada: {},          /* foto eliminada */
     loadingFotoEliminada: true,
+
+    puntuacion: "",
+    loadingFotoPuntuada: true,
 
     error: {
         message: ""
@@ -165,6 +172,20 @@ export default function PeticionesReducer(state = initialState, action) {
     
         case DELETE_FOTO_FAVORITAS_FAIL:
             state = {...state, loadingFotoEliminada: false, fotoEliminada:[], error: {message: action.payload}}
+            break
+
+
+
+        case  UPDATE_FOTO_FAVORITA:
+            state = {...state}
+            break
+        
+        case  UPDATE_FOTO_FAVORITA_OK:
+            state = {...state, puntuacion: action.payload}
+            break
+        
+        case  UPDATE_FOTO_FAVORITA_FAIL:
+            state = {...state, puntuacion: "", error: {message: action.payload}}
             break
 
 

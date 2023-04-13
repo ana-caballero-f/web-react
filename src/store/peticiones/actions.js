@@ -314,6 +314,7 @@ export function deleteFotoFavorita(idFoto) {
 }
 
 
+
 /* acciones para actualizar favoritas (puntuación) */
 export function actionUpdateFoto(idFoto) {
     return{

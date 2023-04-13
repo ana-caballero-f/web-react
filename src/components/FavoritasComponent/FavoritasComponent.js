@@ -2,14 +2,14 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styles from './FavoritasComponent.module.scss';
 import { useDispatch, useSelector } from 'react-redux';
-import { deleteFotoFavorita, getFotosFavoritas } from '../../store/peticiones/actions';
+import { deleteFotoFavorita, getFotosFavoritas, updateFotoFav } from '../../store/peticiones/actions';
 
 
 const FavoritasComponent = () => {
 
   const dispatch = useDispatch()
 
-  const {seleccionFavoritas, fotoEliminada, loadingSeleccFavs} = useSelector((state) => state.PeticionesReducer)
+  const {seleccionFavoritas, fotoEliminada, loadingSeleccFavs, puntuacion} = useSelector((state) => state.PeticionesReducer)
 
 
     /* para cargar las fotos que se van añadiendo en favoritas */
@@ -20,6 +20,10 @@ const FavoritasComponent = () => {
 
     function borrarFoto(id){
       dispatch(deleteFotoFavorita(id))
+    }
+
+    function puntuar(puntos) {
+      dispatch(updateFotoFav())
     }
   
 
@@ -32,6 +36,10 @@ const FavoritasComponent = () => {
         <div>
           <img src= {seleccionFav.photo} alt= {seleccionFav.alt}/>
           <p>Ref foto: #{seleccionFav.id}</p>
+          <div>
+            <button onClick={() => puntuar(seleccionFav.puntuacion) ? "⭐" : ""}>Darle una estrella</button>
+
+          </div>
           <button onClick={() =>borrarFoto(seleccionFav.id)}>Borrar de favoritas</button>
         </div>
       )
