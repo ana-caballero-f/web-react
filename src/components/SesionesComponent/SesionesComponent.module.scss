@@ -19,9 +19,7 @@
     // border: solid 3px red;
     width: 100%;
     margin-right: 2rem; 
-    &:hover {
-        transform: scale(0.9);
-        }  
+ 
 }
 
 .TxSesiones {
@@ -37,6 +35,7 @@
 .CardSesiones {
     box-shadow: 0 8px 12px 6px rgb(138, 132, 131);
     width: 25%;
+    transition: transform 0.5s;
     &:hover {
         transform: scale(1.1);
         }  

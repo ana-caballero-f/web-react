@@ -1,9 +1,27 @@
+@import '../../../src/styles/shared/utils/index.scss';
+
+
 .DetalleComponent {
-    background-color: rgb(179, 179, 216);
+    // background-color: rgb(179, 179, 216);
     width: 70%;
     margin: auto;
+    display: flex;
 }
 
 .ImagenDetalle {
-    width:40%;
+    width:45%;
+}
+
+.BotonFotoDetalle {
+    background-color: $colorPrimary;
+    border: none;
+    margin-left: 10rem;
+    margin-top: 50rem;
+    color: white;
+    font-size: 1rem;
+    padding: 0.3rem;
+    margin-bottom: 1rem;
+    &:hover{
+        background-color: $colorHover;
+       }
 }

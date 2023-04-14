@@ -22,6 +22,7 @@ const InfantilComponent = () => {
 
   return(
   <div className={styles.InfantilComponent}>
+  <h1 className={styles.InfantilTitle}>Fotografía infantil</h1>
     <div className={styles.ContainerFotosInf}>
     {infantil.map(inf => {
       return (

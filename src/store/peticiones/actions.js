@@ -354,7 +354,6 @@ export function deleteFotoFavorita(idFoto) {
 }
 
 
-
 /* acciones para actualizar favoritas (puntuación) */
 export function actionUpdateFoto(idFoto) {
     return{
@@ -382,7 +381,7 @@ export function updateFotoFav(foto, puntos) {
     return async (dispatch) => {
         dispatch(actionUpdateFoto(foto))
         try{
-            const response = await axios.patch(`http://localhost:3000/favoritas/${foto}`, { puntuacion: puntos })
+            const response = await axios.patch(`http://localhost:3000/favoritas/${foto.id}`, { puntuacion: puntos })
             dispatch(actionUpdateFotoOk(response.data))
         }catch(error) {
             dispatch(actionUpdateFotoFail(error))

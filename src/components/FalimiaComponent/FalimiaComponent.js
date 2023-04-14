@@ -22,7 +22,9 @@ const FalimiaComponent = () => {
   return (
 
     <div className={styles.FalimiaComponent}>
+      <h1 className={styles.FalimiaTitle}>Fotografía de familia</h1>
       <div className={styles.ContainerFotosFam}>
+      
       {familia.map(fam => {
         return(
           <img className={styles.FotosFam} src={fam.photo} alt={fam.alt}/>

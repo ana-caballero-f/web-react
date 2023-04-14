@@ -1,16 +1,43 @@
+@import '../../../src/styles/shared/utils/index.scss';
+
 .PrivateComponent {
-    width: 80%;
+    width: 70%;
     margin: auto;
+    padding-bottom: 4rem;
 }
 
 .ContainerFotosPriv {
     display: grid;
-    grid-template-columns:auto auto auto auto auto;
+    grid-template-columns:auto auto auto auto;
     gap: 15px;
-    padding: 0px;
+}
+
+.PrivateTitle {
+    font-family: sans-serif;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.PrivateText {
+    font-family: sans-serif;
+    text-align: center;
+    margin-bottom: 3rem;
 }
 
 .FotosPriv {
     width: 100%;
+}
+
+.BotonFotosPriv {
+    background-color: $colorPrimary;
+    border: none;
+    margin-right: 1rem;
+    color: white;
+    font-size: 1rem;
+    padding: 0.3rem;
+    margin-bottom: 1rem;
+    &:hover{
+        background-color: $colorHover;
+       }
 }
 

@@ -18,7 +18,6 @@ export default function DetalleFotoPage() {
 
        return(
        <div>
-       PAGINA foto detalle
             <DetalleComponent></DetalleComponent>
        </div> 
     )

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './FavoritasComponent.module.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteFotoFavorita, getFotosFavoritas, updateFotoFav } from '../../store/peticiones/actions';
+import { Link } from 'react-router-dom';
 
 
 const FavoritasComponent = () => {
@@ -29,18 +30,14 @@ const FavoritasComponent = () => {
 
   return(
   <div className={styles.FavoritasComponent}>
-   <h1> Tus fotos favoritas</h1>
+   <h1 className={styles.FavoritasTitle}> Tus favoritas</h1>
    <div className={styles.ContainerFotosFavoritas}>
     {seleccionFavoritas.map(seleccionFav => {
       return (
         <div>
           <img className={styles.FotosFavoritas} src= {seleccionFav.photo} alt= {seleccionFav.alt}/>
-          <p>Ref foto: #{seleccionFav.id}</p>
-          <div>
-            <button onClick={() => puntuar(seleccionFav.puntuacion) ? "⭐" : ""}>Darle una estrella</button>
-
-          </div>
-          <button onClick={() =>borrarFoto(seleccionFav.id)}>Borrar de favoritas</button>
+          <button className={styles.BotonFotosFav} onClick={() => puntuar(seleccionFav.puntuacion) ? "⭐" : ""}>Darle una estrella</button>
+          <button className={styles.BotonFotosFav} onClick={() =>borrarFoto(seleccionFav.id)}>Borrar de favoritas</button>
         </div>
       )
     })}

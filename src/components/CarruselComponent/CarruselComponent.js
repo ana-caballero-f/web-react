@@ -29,12 +29,12 @@ const CarruselComponent = () => {
 
     style={{
         "--swiper-navigation-color": "#000000",
-        "--swiper-navigation-border": "solid black 2px"
+        "--swiper-navigation-border": "solid black 2px",
         // "--swiper-pagination-color": "#000000",
       }}
           modules={[Navigation, Pagination, A11y, Autoplay]}
-          spaceBetween={100}
-          slidesPerView={3}
+          spaceBetween={10}
+          slidesPerView={1}
           autoplay
           // navigation
           // pagination={{ clickable: true, loop: true }}

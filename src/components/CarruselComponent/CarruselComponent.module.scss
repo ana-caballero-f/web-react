@@ -1,12 +1,9 @@
 .CarruselComponent {
-    // width: 60%;
-     
+    width: 40%;
     margin-top: 6rem;
-    margin-left: 25rem;
-    margin-bottom: 100px;
+    margin-left: 20rem;
     margin-right: 50px;
-    padding: 100 150px 30px 150px;
-    background-color: red;
+    // background-color: red;
 }
 
 .ContainerFotosCarrusel {
@@ -14,8 +11,7 @@
 }
 
 .FotosCarrusel{
-    height: 500px;
+    height: 25rem;
     width: auto;
-    border: solid red 3px;
-    
+    border: solid rgb(22, 22, 22) 4px;
 }

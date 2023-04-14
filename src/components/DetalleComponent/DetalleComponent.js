@@ -34,11 +34,10 @@ const DetalleComponent = () => {
 
   return (
     <div className={styles.DetalleComponent}>
-    
       <img className={styles.ImagenDetalle} src={foto.photo} alt={foto.alt}/>
-      <p>{foto.id}</p>
-      <button onClick={addFoto}>Añadir a favoritas</button>
-      <Link to='/private'><button>X</button></Link>
+      {/* <button className={styles.BotonFotoDetalle} onClick={addFoto}>Añadir a favoritas</button> */}
+      <p>Ref foto: #{foto.id}</p>
+      <Link to='/private'><button className={styles.BotonFotoDetalle}>Volver a favoritas</button></Link>
     </div>
 )
 };

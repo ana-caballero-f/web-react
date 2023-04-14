@@ -31,19 +31,20 @@ const PrivateComponent = () => {
       dispatch(addFotoFav(id))
     }
 
-
-
     return(
     <div className={styles.PrivateComponent}>
+    <h1 className={styles.PrivateTitle}>Bienvenido a tu área privada</h1>
+    <p className={styles.PrivateText}>Estas son tus fotos seleccionadas.
+      Puedes verlas en grande, añadir a favoritas y darles una estrella</p>
       <div className={styles.ContainerFotosPriv}>
         {priv.map(pri => {
           return (  
             <div>     
               <img className={styles.FotosPriv} src={pri.photo} alt={pri.alt}></img>
               <Link to={`/detalle/${pri.id}`}>
-                <button>Ampliar</button>  
+                <button className={styles.BotonFotosPriv}>Ampliar</button>  
               </Link>
-              <button onClick={() =>addFoto(pri)}>Añadir a favoritas</button> 
+              <button className={styles.BotonFotosPriv} onClick={() =>addFoto(pri)}>Añadir a favoritas</button> 
             </div>
             )
         })}

@@ -11,7 +11,7 @@ import LinkInfantil from '../../assets/images/linkInfant-2.jpg'
 const SesionesComponent = () => (
   <div className={styles.SesionesComponent}> 
     <div>
-      <p className={styles.TxSesiones}>¿Quieres una SESIÓN?</p>
+      <p className={styles.TxSesiones}>Porfolio</p>
     </div>
       <nav>
         <div className={styles.FotosSesiones}>
