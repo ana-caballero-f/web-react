@@ -68,7 +68,8 @@ const initialState = {
     fotoEliminada: {},          /* foto eliminada */
     loadingFotoEliminada: true,
 
-    comentario: "",
+    comentario: "",             /* añadir comentario  PERO NO ESTÁ VACÍO!!!*/
+    /* fotoComentada: {}     ¿¿¿AQUÍ NECESITARÍA SABER EL ID DE LA FOTO??? */
     loadingComentario: false,
 
     error: {
@@ -198,15 +199,15 @@ export default function PeticionesReducer(state = initialState, action) {
 
 
         case  UPDATE_FOTO_FAVORITA:
-            state = {...state, loadingComentario: true}
+            state = {...state, loadingComentario: false}
             break
         
         case  UPDATE_FOTO_FAVORITA_OK:
-            state = {...state, comentario: action.payload}
+            state = {...state, loadingComentario: true, comentario: action.payload}
             break
         
         case  UPDATE_FOTO_FAVORITA_FAIL:
-            state = {...state, comentario: "", error: {message: action.payload}}
+            state = {...state, loadingComentario: false, comentario: "", error: {message: action.payload}}
             break
 
 

@@ -11,11 +11,11 @@ const FavoritasComponent = () => {
   const dispatch = useDispatch()
 
   /* constantes del reducer que se necesitan */
-  const {seleccionFavoritas, fotoEliminada, loadingSeleccFavs, comentario} = useSelector((state) => state.PeticionesReducer)
+  const {seleccionFavoritas, fotoEliminada, loadingSeleccFavs, comentario, favorita} = useSelector((state) => state.PeticionesReducer)
 
 
   /* recoger valores del comentario */
-  const [userComment, setUserComment] = useState("")
+ // const [comment, setComment] = useState("")
 
 
   /* cargar las fotos que se van añadiendo en favoritas */
@@ -31,10 +31,11 @@ const FavoritasComponent = () => {
 
 
     /* update dejar comentario */
-    function comentar(comentario) {
-      dispatch(updateFotoFav(seleccionFavoritas.id, comentario))
-      alert("Gracias! Tendré en cuenta tu comentario.")
-      setUserComment("")
+    function comentar(seleccionFav) {
+      dispatch(updateFotoFav(seleccionFav.id, seleccionFav.comment))
+      //console.log(setComment)
+      // alert("Gracias! Tendré en cuenta tu comentario.")
+      //setComment("")
     }
   
 
@@ -51,8 +52,10 @@ const FavoritasComponent = () => {
           </div>
           <div>
             <label>Deja un comentario</label>
-            <input value = {userComment} onChange={(e) =>setUserComment(e.target.value)} type='text'></input>
-            <button className={styles.BotonFotosFav} onClick={() => comentar(comentario)}>Mandar comentario</button>
+
+            <input defaultValue={seleccionFav.comment} onChange={(e)=> {seleccionFav.comment = e.target.value}} type='text'></input>
+            <button className={styles.BotonFotosFav} onClick={() => comentar(seleccionFav)}>Mandar comentario</button>
+
             <button className={styles.BotonFotosFav} onClick={() =>borrarFoto(seleccionFav.id)}>Borrar de favoritas</button>
           </div>
         </div>
