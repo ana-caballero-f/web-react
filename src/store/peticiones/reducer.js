@@ -68,8 +68,8 @@ const initialState = {
     fotoEliminada: {},          /* foto eliminada */
     loadingFotoEliminada: true,
 
-    puntuacion: "",
-    loadingFotoPuntuada: true,
+    comentario: "",
+    loadingComentario: false,
 
     error: {
         message: ""
@@ -198,15 +198,15 @@ export default function PeticionesReducer(state = initialState, action) {
 
 
         case  UPDATE_FOTO_FAVORITA:
-            state = {...state}
+            state = {...state, loadingComentario: true}
             break
         
         case  UPDATE_FOTO_FAVORITA_OK:
-            state = {...state, puntuacion: action.payload}
+            state = {...state, comentario: action.payload}
             break
         
         case  UPDATE_FOTO_FAVORITA_FAIL:
-            state = {...state, puntuacion: "", error: {message: action.payload}}
+            state = {...state, comentario: "", error: {message: action.payload}}
             break
 
 

@@ -355,17 +355,17 @@ export function deleteFotoFavorita(idFoto) {
 
 
 /* acciones para actualizar favoritas (puntuación) */
-export function actionUpdateFoto(idFoto) {
+export function actionUpdateFoto() {
     return{
         type: UPDATE_FOTO_FAVORITA,
-        payload: idFoto
+        
     }
 }
 
-export function actionUpdateFotoOk(fotoUpdate) {
+export function actionUpdateFotoOk(updateComentario) {
     return{
         type: UPDATE_FOTO_FAVORITA_OK,
-        payload: fotoUpdate
+        payload: updateComentario
         }
 }
 
@@ -377,11 +377,11 @@ export function actionUpdateFotoFail(error) {
 }
 
 
-export function updateFotoFav(foto, puntos) {
+export function updateFotoFav(id, nuevoComentario) {
     return async (dispatch) => {
-        dispatch(actionUpdateFoto(foto))
+        dispatch(actionUpdateFoto())
         try{
-            const response = await axios.patch(`http://localhost:3000/favoritas/${foto.id}`, { puntuacion: puntos })
+            const response = await axios.patch(`http://localhost:3000/favoritas/${id}`, {comentario: nuevoComentario})
             dispatch(actionUpdateFotoOk(response.data))
         }catch(error) {
             dispatch(actionUpdateFotoFail(error))

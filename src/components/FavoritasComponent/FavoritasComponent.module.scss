@@ -7,10 +7,11 @@
 
 
 .ContainerFotosFavoritas {
-display: grid;
-grid-template-columns: 20% 20% 20% 20% 20%;
-gap: 15px;
-padding: 0px;
+display: flex;
+flex-direction: column;
+// grid-template-columns: 20% 20% 20% 20% 20%;
+// gap: 15px;
+// padding: 0px;
 }
 
 .FavoritasTitle{
@@ -19,8 +20,12 @@ padding: 0px;
     margin-bottom: 1rem;
 }
 
+.FotoComentario {
+    display: flex;
+}
+
 .FotosFavoritas {
-    width: 100%;
+    width: 30%;
 }
 
 .BotonFotosFav {
