@@ -37,6 +37,7 @@ const LoginComponent = () => {
 
   return(
     <div className={styles.LoginComponent}>
+    <h3 className={styles.LoginTitle}>Si tienes cuenta, entra en el área privada</h3>
       <form>
         <label>Email</label><br/>
         <input className={styles.LoginInput} value={name} onChange={(e) => setName(e.target.value)}></input><br/>

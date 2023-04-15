@@ -2,6 +2,37 @@
 
 .FooterComponent {
     background-color: $colorPrimary;
-    height: 100px;
+    height: 120px;
     margin-top: 8rem;
+    padding-bottom: 1rem;
+}
+
+.FooterContainer {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.FooterText {
+    // border: solid black 2px;
+    text-align: center;
+    color: white;
+    padding-top: 1rem;
+    margin-bottom: 0rem;
+    font-size: 1.2rem;
+}
+
+.FooterLink {
+    // border: solid rgb(209, 71, 71) 2px;
+    color: white;
+    text-decoration: none;
+    padding-right: 2rem;
+        &:hover {
+            color: $colorHover;
+        }
+}
+
+.FooterYear {
+    color: white;
+    text-align: center;
 }

@@ -1,6 +1,7 @@
 import PrivateComponent from "../../components/PrivateComponent/PrivateComponent"
 import FavoritasComponent from "../../components/FavoritasComponent/FavoritasComponent"
 
+
 export default function PrivatePage() {
 
     return(

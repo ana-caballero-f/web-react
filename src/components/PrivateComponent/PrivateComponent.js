@@ -35,7 +35,7 @@ const PrivateComponent = () => {
     <div className={styles.PrivateComponent}>
     <h1 className={styles.PrivateTitle}>Bienvenido a tu área privada</h1>
     <p className={styles.PrivateText}>Estas son tus fotos seleccionadas.
-      Puedes verlas en grande, añadir a favoritas y darles una estrella</p>
+      Puedes verlas en grande y añadir a favoritas </p>
       <div className={styles.ContainerFotosPriv}>
         {priv.map(pri => {
           return (  

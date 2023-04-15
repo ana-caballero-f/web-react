@@ -19,10 +19,6 @@ const DetalleComponent = () => {
     const dispatch = useDispatch();
     const params = useParams();
 
-  function addFoto() {
-    dispatch(addFotoFav(params.id))
-  }
-
 
   if(loadingFotoDet) {
     return (
@@ -35,9 +31,17 @@ const DetalleComponent = () => {
   return (
     <div className={styles.DetalleComponent}>
       <img className={styles.ImagenDetalle} src={foto.photo} alt={foto.alt}/>
-      {/* <button className={styles.BotonFotoDetalle} onClick={addFoto}>Añadir a favoritas</button> */}
-      <p>Ref foto: #{foto.id}</p>
-      <Link to='/private'><button className={styles.BotonFotoDetalle}>Volver a favoritas</button></Link>
+      <div className={styles.Section}>
+        
+          <h2 className={styles.DetalleTitle}>Detelles de la foto</h2>
+          <section className={styles.SectionParrafo}>
+          <h4 className={styles.DetalleTitleDos}>Sobre esta foto:</h4>
+          <p className={styles.TextoDetalle}>{foto.aboutThis}</p>      
+          <h4 className={styles.DetalleTitleDos}>Número de referencia:</h4>
+          <p className={styles.TextoDetalle}>Ref: #{foto.id}</p>
+          <Link to='/private'><button className={styles.BotonFotoDetalle}>Volver a favoritas</button></Link>
+        </section> 
+      </div>
     </div>
 )
 };

@@ -33,16 +33,15 @@ const FavoritasComponent = () => {
     /* update dejar comentario */
     function comentar(seleccionFav) {
       dispatch(updateFotoFav(seleccionFav.id, seleccionFav.comment))
-      //console.log(setComment)
       // alert("Gracias! Tendré en cuenta tu comentario.")
-      //setComment("")
-    }
+       }
   
 
   return(
   
   <div className={styles.FavoritasComponent}>
-   <h1 className={styles.FavoritasTitle}> Tus favoritas</h1>
+   <h1 className={styles.FavoritasTitle}> Tu selección de favoritas</h1>
+   <p className={styles.FavoritasSubTitle}>Puedes dejarme un comentario o quitarla de favoritas</p>
    <div className={styles.ContainerFotosFavoritas}>
     {seleccionFavoritas.map(seleccionFav => {
       return (
@@ -51,7 +50,7 @@ const FavoritasComponent = () => {
             <img className={styles.FotosFavoritas} src= {seleccionFav.photo} alt= {seleccionFav.alt}/>
           </div>
           <div>
-            <label>Deja un comentario</label>
+            <label>Deja un comentario</label><br/>
 
             <input defaultValue={seleccionFav.comment} onChange={(e)=> {seleccionFav.comment = e.target.value}} type='text'></input>
             <button className={styles.BotonFotosFav} onClick={() => comentar(seleccionFav)}>Mandar comentario</button>
