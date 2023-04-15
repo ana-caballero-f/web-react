@@ -1,17 +1,8 @@
 @import '../../../src/styles/shared/utils/index.scss';
 
 .FavoritasComponent {
-    background-color: pink;
-    
     width: 40%;
     margin: auto;
-}
-
-
-.ContainerFotosFavoritas {
-    border: solid 3px black;
-    // display: flex;
-    flex-direction: column;
 }
 
 .FavoritasTitle{
@@ -26,8 +17,11 @@
     margin-bottom: 3rem;
 }
 
+.ContainerFotosFavoritas {
+    flex-direction: column;
+}
+
 .FotoComentario {
-    border: solid 2px green;
     display: flex;
 }
 
@@ -35,12 +29,29 @@
     width: 60%;
 }
 
+.BloqueComentario {
+    margin-top: 3rem;
+    margin-right: 5rem;
+}
+
+.Label {
+    font-size: 1.1rem;
+    font-family: sans-serif;
+}
+
+.Input {
+    width: 100%;
+    margin-top: 0.8rem;
+    margin-bottom: 2rem;
+}
+
 .BotonFotosFav {
     background-color: $colorPrimary;
+    width: 100%;
     border: none;
     margin-right: 1rem;
     color: white;
-    font-size: 0.8rem;
+    font-size: 1rem;
     padding: 0.3rem;
     margin-bottom: 1rem;
     &:hover{

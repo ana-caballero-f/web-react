@@ -33,26 +33,26 @@ const FavoritasComponent = () => {
     /* update dejar comentario */
     function comentar(seleccionFav) {
       dispatch(updateFotoFav(seleccionFav.id, seleccionFav.comment))
-      // alert("Gracias! Tendré en cuenta tu comentario.")
+      alert("Gracias! Tendré en cuenta tu comentario.")
        }
   
 
   return(
   
   <div className={styles.FavoritasComponent}>
-   <h1 className={styles.FavoritasTitle}> Tu selección de favoritas</h1>
-   <p className={styles.FavoritasSubTitle}>Puedes dejarme un comentario o quitarla de favoritas</p>
-   <div className={styles.ContainerFotosFavoritas}>
-    {seleccionFavoritas.map(seleccionFav => {
-      return (
+    <h1 className={styles.FavoritasTitle}> Tu selección de favoritas</h1>
+    <p className={styles.FavoritasSubTitle}>Puedes dejarme un comentario o quitarla de favoritas</p>
+    <div className={styles.ContainerFotosFavoritas}>
+      {seleccionFavoritas.map(seleccionFav => {
+        return (
         <div className={styles.FotoComentario}>
           <div>
             <img className={styles.FotosFavoritas} src= {seleccionFav.photo} alt= {seleccionFav.alt}/>
           </div>
-          <div>
-            <label>Deja un comentario</label><br/>
+          <div className={styles.BloqueComentario}>
+            <label className={styles.Label}>Puedes dejarme un comentario:</label><br/>
 
-            <input defaultValue={seleccionFav.comment} onChange={(e)=> {seleccionFav.comment = e.target.value}} type='text'></input>
+            <textarea rows="4" cols="50" className={styles.Input} defaultValue={seleccionFav.comment} onChange={(e)=> {seleccionFav.comment = e.target.value}} type='text' placeholder='Escribe aquí...'></textarea>
             <button className={styles.BotonFotosFav} onClick={() => comentar(seleccionFav)}>Mandar comentario</button>
 
             <button className={styles.BotonFotosFav} onClick={() =>borrarFoto(seleccionFav.id)}>Borrar de favoritas</button>
