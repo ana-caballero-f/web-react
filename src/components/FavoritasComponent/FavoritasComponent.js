@@ -11,7 +11,7 @@ const FavoritasComponent = () => {
   const dispatch = useDispatch()
 
   /* constantes del reducer que se necesitan */
-  const {seleccionFavoritas, fotoEliminada, loadingSeleccFavs, comentario, favorita} = useSelector((state) => state.PeticionesReducer)
+  const {seleccionFavoritas, fotoEliminada, loadingSeleccFavs, comentario} = useSelector((state) => state.PeticionesReducer)
 
 
   /* recoger valores del comentario */
@@ -53,7 +53,7 @@ const FavoritasComponent = () => {
           <div>
             <label>Deja un comentario</label>
 
-            <input defaultValue={seleccionFav.comment} onChange={(e)=> {seleccionFav.comment = e.target.value}} type='text'></input>
+            <input defaultValue="" onChange={(e)=> {seleccionFav.comment = e.target.value}} type='text'></input>
             <button className={styles.BotonFotosFav} onClick={() => comentar(seleccionFav)}>Mandar comentario</button>
 
             <button className={styles.BotonFotosFav} onClick={() =>borrarFoto(seleccionFav.id)}>Borrar de favoritas</button>
@@ -64,7 +64,8 @@ const FavoritasComponent = () => {
     </div>
   </div>
   
-)
+
+  )
 };
 
 FavoritasComponent.propTypes = {};

@@ -68,8 +68,7 @@ const initialState = {
     fotoEliminada: {},          /* foto eliminada */
     loadingFotoEliminada: true,
 
-    comentario: "",             /* añadir comentario  PERO NO ESTÁ VACÍO!!!*/
-    /* fotoComentada: {}     ¿¿¿AQUÍ NECESITARÍA SABER EL ID DE LA FOTO??? */
+    comentario: "",             /* añadir comentario */
     loadingComentario: false,
 
     error: {
