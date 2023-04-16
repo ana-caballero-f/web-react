@@ -1,17 +1,34 @@
+@import '../../../src/styles/shared/utils/index.scss';
+
 .CarruselComponent {
-    width: 40%;
+    width: 70%;
     margin-top: 6rem;
     margin-left: 20rem;
-    margin-right: 50px;
-    // background-color: red;
-}
-
-.ContainerFotosCarrusel {
     display: flex;
 }
 
+.ContainerFotosCarrusel {
+    display: flex;  
+}
+
 .FotosCarrusel{
+    border: solid black 4px;
     height: 25rem;
     width: auto;
-    border: solid rgb(22, 22, 22) 4px;
+}
+
+.TextoInfo {
+    text-align: center;
+    color: $colorPrimary;
+    font-size: 1.7rem;
+    font-family:sans-serif;
+    width: 40rem;  
+    margin-top: 8rem;  
+    &:hover {
+        color: $colorHover; 
+    }
+}
+
+.LinkInfo {
+    text-decoration: none;
 }

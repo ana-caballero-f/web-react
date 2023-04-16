@@ -11,6 +11,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import { Link } from 'react-router-dom';
 
 
 const CarruselComponent = () => {
@@ -51,8 +52,8 @@ const CarruselComponent = () => {
     })}
     </div>
     </Swiper>
-    <div>
-      LINK DE CONTACTO
+    <div className={styles.ContainerInfo}>
+    <Link className={styles.LinkInfo} to='/contacto'><p className={styles.TextoInfo}>Información y reserva de sesiones</p></Link>
     </div>
   </div>
 )

@@ -2,28 +2,24 @@
 
 
 .SesionesComponent {
-    // border: solid blue 3px;
     display: flex;
     width: 90%;
     margin: auto;
 }
 
 .FotosSesiones {
-    // border: solid 4px black;
     margin-left: 2rem;
     display: flex;
     gap: 2rem;
 }
 
 .SesionesLinks {
-    // border: solid 3px red;
     width: 100%;
     margin-right: 2rem; 
  
 }
 
 .TxSesiones {
-    // border: solid green 2px;
     color: $colorPrimary;
     font-size: 2rem;
     font-family:sans-serif;
