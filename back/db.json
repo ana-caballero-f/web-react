@@ -1,0 +1,468 @@
+{
+  "users": [
+    {
+      "email": "ana@mail.com",
+      "password": "$2a$10$KF.yIQltFwRxIJDvCVDtTOuJ6chPA8S9Vi/Dzdz7an7FlUqTDAbEy",
+      "id": 1
+    },
+    {
+      "email": "oscar@mail.com",
+      "password": "$2a$10$QplM09RFOKUzOk4Xnxf1u.6k8AzWILJGH69UGmbFdcUT/XUCP7pJi",
+      "id": 2
+    },
+    {
+      "email": "jose@mail.com",
+      "password": "$2a$10$v3R7vsxCMmz2O6dLtinxp.6CgCzBddC86mCVobQJ9WSXiB4qNPaUW",
+      "id": 3
+    },
+    {
+      "email": "fulanito@mail.com",
+      "password": "$2a$10$be6qM7.yakFmVxqrz0za7eA4XRnNwX/r30xLv80F9xqzfF9K.hwaa",
+      "name": "Fulanito",
+      "id": 4
+    },
+    {
+      "email": "tal@mail.com",
+      "password": "$2a$10$Vf1hsLhZdtocJNBvbikKGOfOdCQ/DTQujyr1aMe/bptG81A4OTLYa",
+      "name": "tal",
+      "id": 5
+    },
+    {
+      "email": "lolo@mail.com",
+      "password": "$2a$10$V1TMn5xkuvgcKqhLrEpcwOtQE3fSwVrgviAacGShJpC1NzcNLMKHO",
+      "name": "lolo",
+      "id": 6
+    },
+    {
+      "email": "momo@mail.com",
+      "password": "$2a$10$hDqmtbkYK4ttA7sY.C/9B.8slNPGpGepB3C/IPN129n5cwDi4hVtS",
+      "name": "momo",
+      "id": 7
+    },
+    {
+      "email": "soso@mail.com",
+      "password": "$2a$10$jvi9QiCBJrJqZW6LG5vE2.J.LZR4t4Z1b0XNX4iVW6xDOMI5nAoA6",
+      "name": "soso",
+      "id": 8
+    },
+    {
+      "email": "raul@mail.com",
+      "password": "$2a$10$b28Fu9w5pjm.5yFMtkGMLOrEtA87QKReJJ1orJhwU4oS4X0m5hxqC",
+      "name": "raul",
+      "id": 9
+    },
+    {
+      "email": "tutu@mail.com",
+      "password": "$2a$10$sdIYzAnMFT21zQif3nE9ROlYpnQ7wyTPsAijtvITQcXBUSCiWnqZS",
+      "name": "tutu",
+      "id": 10
+    },
+    {
+      "email": "susu@mail.com",
+      "password": "$2a$10$AYsgF7UTrJ2svoyYsUqd5.NlT7At/FoUtXDELLry/bpux7ERrCDyW",
+      "name": "susu",
+      "id": 11
+    },
+    {
+      "email": "mimi@mail.com",
+      "password": "$2a$10$V6bLQ0ifXCh2OqXKXui47.HktH6McvHO5PwEeOUIS/zcbi1KsOjwW",
+      "name": "mimi",
+      "id": 12
+    }
+  ],
+  "comunion": [
+    {
+      "photo": "assets/images/comunion-9.jpg",
+      "alt": "foto comunion"
+    },
+    {
+      "photo": "assets/images/comunion-10.jpg",
+      "alt": "foto comunion"
+    },
+    {
+      "photo": "assets/images/comunion-11.jpg",
+      "alt": "foto comunion"
+    },
+    {
+      "photo": "assets/images/comunion-14.jpg",
+      "alt": "foto comunion"
+    },
+    {
+      "photo": "assets/images/comunion-16.jpg",
+      "alt": "foto comunion"
+    },
+    {
+      "photo": "assets/images/comunion-17.jpg",
+      "alt": "foto comunion"
+    },
+    {
+      "photo": "assets/images/comunion-18.jpg",
+      "alt": "foto comunion"
+    },
+    {
+      "photo": "assets/images/comunion-19.jpg",
+      "alt": "foto comunion"
+    },
+    {
+      "photo": "assets/images/comunion-20.jpg",
+      "alt": "foto comunion"
+    },
+    {
+      "photo": "assets/images/comunion-21.jpg",
+      "alt": "foto comunion"
+    },
+    {
+      "photo": "assets/images/comunion-23.jpg",
+      "alt": "foto comunion"
+    },
+    {
+      "photo": "assets/images/comunion-26.jpg",
+      "alt": "foto comunion"
+    },
+    {
+      "photo": "assets/images/comunion-2.jpg",
+      "alt": "foto comunion"
+    },
+    {
+      "photo": "assets/images/comunion-7.jpg",
+      "alt": "foto comunion"
+    },
+    {
+      "photo": "assets/images/comunion-8.jpg",
+      "alt": "foto comunion"
+    },
+    {
+      "photo": "assets/images/comunion-15.jpg",
+      "alt": "foto comunion"
+    },
+    {
+      "photo": "assets/images/comunion-1.jpg",
+      "alt": "foto comunion"
+    },
+    {
+      "photo": "assets/images/comunion-3.jpg",
+      "alt": "foto comunion"
+    },
+    {
+      "photo": "assets/images/comunion-4.jpg",
+      "alt": "foto comunion"
+    },
+    {
+      "photo": "assets/images/comunion-6.jpg",
+      "alt": "foto comunion"
+    }
+  ],
+  "infantil": [
+    {
+      "photo": "assets/images/infantil-1.jpg",
+      "alt": "foto infantil"
+    },
+    {
+      "photo": "assets/images/infantil-2.jpg",
+      "alt": "foto infantil"
+    },
+    {
+      "photo": "assets/images/infantil-20.jpg",
+      "alt": "foto infantil"
+    },
+    {
+      "photo": "assets/images/infantil-21.jpg",
+      "alt": "foto infantil"
+    },
+    {
+      "photo": "assets/images/infantil-4.jpg",
+      "alt": "foto infantil"
+    },
+    {
+      "photo": "assets/images/infantil-5.jpg",
+      "alt": "foto infantil"
+    },
+    {
+      "photo": "assets/images/infantil-8.jpg",
+      "alt": "foto infantil"
+    },
+    {
+      "photo": "assets/images/infantil-22.jpg",
+      "alt": "foto infantil"
+    },
+    {
+      "photo": "assets/images/infantil-23.jpg",
+      "alt": "foto infantil"
+    },
+    {
+      "photo": "assets/images/infantil-9.jpg",
+      "alt": "foto infantil"
+    },
+    {
+      "photo": "assets/images/infantil-10.jpg",
+      "alt": "foto infantil"
+    },
+    {
+      "photo": "assets/images/infantil-12.jpg",
+      "alt": "foto infantil"
+    },
+    {
+      "photo": "assets/images/infantil-11.jpg",
+      "alt": "foto infantil"
+    },
+    {
+      "photo": "assets/images/infantil-13.jpg",
+      "alt": "foto infantil"
+    },
+    {
+      "photo": "assets/images/infantil-14.jpg",
+      "alt": "foto infantil"
+    },
+    {
+      "photo": "assets/images/infantil-17.jpg",
+      "alt": "foto infantil"
+    },
+    {
+      "photo": "assets/images/infantil-18.jpg",
+      "alt": "foto infantil"
+    },
+    {
+      "photo": "assets/images/infantil-19.jpg",
+      "alt": "foto infantil"
+    }
+  ],
+  "familia": [
+    {
+      "photo": "assets/images/familia-1.jpg",
+      "alt": ""
+    },
+    {
+      "photo": "assets/images/familia-2.jpg",
+      "alt": ""
+    },
+    {
+      "photo": "assets/images/familia-3.jpg",
+      "alt": ""
+    },
+    {
+      "photo": "assets/images/familia-5.jpg",
+      "alt": ""
+    },
+    {
+      "photo": "assets/images/familia-6.jpg",
+      "alt": ""
+    },
+    {
+      "photo": "assets/images/familia-7.jpg",
+      "alt": ""
+    },
+    {
+      "photo": "assets/images/familia-8.jpg",
+      "alt": ""
+    },
+    {
+      "photo": "assets/images/familia-9.jpg",
+      "alt": ""
+    },
+    {
+      "photo": "assets/images/familia-13.jpg",
+      "alt": ""
+    },
+    {
+      "photo": "assets/images/familia-14.jpg",
+      "alt": ""
+    },
+    {
+      "photo": "assets/images/familia-15.jpg",
+      "alt": ""
+    },
+    {
+      "photo": "assets/images/familia-16.jpg",
+      "alt": ""
+    }
+  ],
+  "carrusel": [
+    {
+      "photo": "assets/images/carrusel-2.jpg",
+      "alt": ""
+    },
+    {
+      "photo": "assets/images/carrusel-3.jpg",
+      "alt": ""
+    },
+    {
+      "photo": "assets/images/carrusel-4.jpg",
+      "alt": ""
+    },
+    {
+      "photo": "assets/images/carrusel-5.jpg",
+      "alt": ""
+    },
+    {
+      "photo": "assets/images/carrusel-6.jpg",
+      "alt": ""
+    },
+    {
+      "photo": "assets/images/carrusel-7.jpg",
+      "alt": ""
+    },
+    {
+      "photo": "assets/images/carrusel-9.jpg",
+      "alt": ""
+    },
+    {
+      "photo": "assets/images/carrusel-10.jpg",
+      "alt": ""
+    },
+    {
+      "photo": "assets/images/carrusel-11.jpg",
+      "alt": ""
+    },
+    {
+      "photo": "assets/images/carrusel-12.jpg",
+      "alt": ""
+    },
+    {
+      "photo": "assets/images/carrusel-13.jpg",
+      "alt": ""
+    },
+    {
+      "photo": "assets/images/carrusel-14.jpg",
+      "alt": ""
+    },
+    {
+      "photo": "assets/images/carrusel-15.jpg",
+      "alt": ""
+    },
+    {
+      "photo": "assets/images/carrusel-16.jpg",
+      "alt": ""
+    }
+  ],
+  "private": [
+    {
+      "photo": "/assets/images/private.jpg",
+      "alt": "",
+      "id": 1,
+      "aboutThis": "Creo que esta foto es una de las mejores de retrato con el vestido blanco.",
+      "comment": ""
+    },
+    {
+      "photo": "/assets/images/private-2.jpg",
+      "alt": "",
+      "id": 2,
+      "aboutThis": "El plano americano deja ver las espectaculares mangas del vestido.",
+      "comment": ""
+    },
+    {
+      "photo": "/assets/images/private-3.jpg",
+      "alt": "",
+      "id": 3,
+      "aboutThis": "La mano en el acentúa la amplitud de la manga.",
+      "comment": ""
+    },
+    {
+      "photo": "/assets/images/private-5.jpg",
+      "alt": "",
+      "id": 5,
+      "aboutThis": "Un retrato informal, con una sonrisa muy natural.",
+      "comment": ""
+    },
+    {
+      "photo": "/assets/images/private-6.jpg",
+      "alt": "",
+      "id": 6,
+      "aboutThis": "Esta foto es imprescindible, ya que se ve el traje blanco de cuerpo entero.",
+      "comment": ""
+    },
+    {
+      "photo": "/assets/images/private-7.jpg",
+      "alt": "",
+      "id": 7,
+      "aboutThis": "Una de mis favoritas, la pose es espectacular.",
+      "comment": ""
+    },
+    {
+      "photo": "/assets/images/private-8.jpg",
+      "alt": "",
+      "id": 8,
+      "aboutThis": "Una de mis favoritas, la pose es espectacular.",
+      "comment": ""
+    },
+    {
+      "photo": "/assets/images/private-9.jpg",
+      "alt": "",
+      "id": 9,
+      "aboutThis": "Una de mis favoritas, la pose es espectacular.",
+      "comment": ""
+    },
+    {
+      "photo": "/assets/images/private-10.jpg",
+      "alt": "",
+      "id": 10,
+      "aboutThis": "Con la banda de Reina, esta foto es imprescindible en tu selección.",
+      "comment": ""
+    },
+    {
+      "photo": "/assets/images/private-11.jpg",
+      "alt": "",
+      "id": 11,
+      "aboutThis": "Otra imprescindible, ya que se ve el traje de lunares de cuerpo entero.",
+      "comment": ""
+    },
+    {
+      "photo": "/assets/images/private-12.jpg",
+      "alt": "",
+      "id": 12,
+      "aboutThis": "Una de mis favoritas, la pose es espectacular.",
+      "comment": ""
+    },
+    {
+      "photo": "/assets/images/private-14.jpg",
+      "alt": "",
+      "id": 14,
+      "aboutThis": "Una de mis favoritas, la pose es espectacular.",
+      "comment": ""
+    },
+    {
+      "photo": "/assets/images/private-15.jpg",
+      "alt": "",
+      "id": 15,
+      "aboutThis": "Otra imprescindible, ya que se ve el traje rojo de cuerpo entero.",
+      "comment": ""
+    },
+    {
+      "photo": "/assets/images/private-16.jpg",
+      "alt": "",
+      "id": 16,
+      "aboutThis": "Un retrato desenfadado. ¡Imprescindible!",
+      "comment": ""
+    },
+    {
+      "photo": "/assets/images/private-17.jpg",
+      "alt": "",
+      "id": 17,
+      "aboutThis": "Foto de las hermanas que hay que tener.",
+      "comment": ""
+    },
+    {
+      "photo": "/assets/images/private-18.jpg",
+      "alt": "",
+      "id": 18,
+      "aboutThis": "Foto de las hermanas que hay que tener.",
+      "comment": ""
+    }
+  ],
+  "favoritas": [
+    {
+      "photo": "/assets/images/private-16.jpg",
+      "alt": "",
+      "id": 16,
+      "aboutThis": "Un retrato desenfadado. ¡Imprescindible!",
+      "comment": "",
+      "comentario": "hola!"
+    },
+    {
+      "photo": "/assets/images/private-11.jpg",
+      "alt": "",
+      "id": 11,
+      "aboutThis": "Otra imprescindible, ya que se ve el traje de lunares de cuerpo entero.",
+      "comment": ""
+    }
+  ]
+}
