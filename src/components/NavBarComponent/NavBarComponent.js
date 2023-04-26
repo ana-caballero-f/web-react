@@ -11,7 +11,7 @@ const NavBarComponent = () => {
 
   const {user} = useSelector((state)=> state.AuthReducer)
 
-  const dispatch = useDispatch
+  const dispatch = useDispatch()
 
   function cerrarSesion() {
     dispatch(doLogout())
